@@ -85,3 +85,18 @@
  + touch filename 创建文件 touch修改时间戳默认文件不存在自动创建
 + file filename 创建文件
 + stat filename 查看文件属性状态
++ rm -i (删除提示) filename  
+  + -f（强制删除）
+  + -r  (递归删除)
++ mv (move)：mv SRC DEST 
+  + -f (force)：强制进行覆盖
+  + -i (interactive)：执行命令时可以交互
++ cp (copy)：默认只能复制文件，不能复制目录
+  + 一个文件到一个文件
+  + 多个文件到一个目录，最后一个参数是文件目的地，前面都是源
+  + -r (recursive)：递归复制文件及目录到指定位置
+  + -i (interactive)：复制过程有问题会提示
+  + -p (perserve) :保留文件原有属性
+  + -a (archive)：保持链接属性，复制链接而不是文件，归档复制，常用于备份
++ install ：也可以用来复制文件
+  + -d (directory)：用于创建目录
