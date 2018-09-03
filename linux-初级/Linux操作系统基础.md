@@ -7,12 +7,16 @@
 
 ***GUI接口*** ：Graphic User Interface
 
-	+ Winows
+```bash
++ Winows
+```
 + X-Window:主机和显示器分离
 
 ***CLI接口*** ：Command Line Interface
 
-	+ bash
+```bash
++ bash
+```
 + ksh
 
 ***命令提示符：***
@@ -29,9 +33,9 @@
 
     ​		 短选项：－
 
-​			长选项：--
+    ​		长选项：--参数：
 
-+ 参数：命令的作用对象
+    命令的作用对象
 
 **使用凭证** ：用户认证，身份认证（严格区分大小写）
 

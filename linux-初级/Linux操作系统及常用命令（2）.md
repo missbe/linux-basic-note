@@ -1,6 +1,6 @@
 ## Linux操作系统常用命令 ##
 
-```
+```bash
 # date 时间管理
 Linux:rtx实时
 ntp（时间服务器）从服务器上同步时间
@@ -26,8 +26,8 @@ ntp（时间服务器）从服务器上同步时间
 	7. 杂项（Miscellaneous)
 	8. 管理命令(/sbin,/usr/bin,/usr/local/bin)
 
-```
-# what is command
+```bash
+# whatis command
 功能：这个命令在那个章节，man中章节查看
 # type command
 功能：这个命令是内部命令还是外部命令
@@ -40,7 +40,7 @@ ntp（时间服务器）从服务器上同步时间
 + ....:可以出现多次
 + （）：分组命令
 
-```BUGS
+```bash
 # man command 帮助说明
 	NAME；命令名称及功能简要说明
 	SYNOPSIS：用法说明，包括可用的选项
@@ -63,7 +63,7 @@ ntp（时间服务器）从服务器上同步时间
 	q 退出
 ```
 
-```
+```bash
 # hwclock -r 查看系统硬件时钟
 	-w:设置硬件时间到系统时间
 	-s:设置系统时间到硬件时间
