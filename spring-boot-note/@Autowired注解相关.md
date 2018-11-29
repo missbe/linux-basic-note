@@ -20,3 +20,5 @@ public class User {
 ```
 
 @Quelifier ->当多个类都带有@Primary注解时不能区分使用那个类对象。使用@Quelifier增加别名，通过类型和名称来确定使用那个类对象；
+
+@Resource是JDK提供的注解，默认就是按照byName的方式寻找bean，一般一个name对应一个bean，当找不到与名称匹配的bean才会按照类型装配（byType）。 
