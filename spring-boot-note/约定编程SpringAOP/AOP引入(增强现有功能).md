@@ -149,8 +149,7 @@ public class UserController {
         /*
           生成代理对象时，第二个参数传递所有接口数组，代理对象实现了所有的接口，
           所以可以调用接口里的方法和进行强制类型转换
-          [Proxy.newProxyInstance(target.getClass().getClassLoader(),
-                          target.getClass().getInterfaces(),proxyBean)]
+          [Proxy.newProxyInstance(target.getClass().getClassLoader(),                      target.getClass().getInterfaces(),proxyBean)]
          */
         UserValidator userValidator = (UserValidator)userService;
         if(userValidator.validate(user)){
@@ -174,7 +173,8 @@ id:10085
 userName:tt
 note:note
 after.....
-afterReturning.....ost:8080/vp?id=10085&userName=tt&note=note
+afterReturning.....
 **/
 ```
 
+NOTE：Spring规则->当你使用AOP的类拥有接口时，会以JDK动态代理运行，否则以CGlib运行。
