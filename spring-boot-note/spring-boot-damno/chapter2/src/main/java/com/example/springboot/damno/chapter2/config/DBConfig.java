@@ -24,13 +24,13 @@ public class DBConfig {
     @Bean(name = "dataSource")
     @Conditional(DatabaseConditional.class)
     public DataSource getDataSource(@Value("${database.driver}")
-                                    String driver,
+                                            String driver,
                                     @Value("${database.url}")
-                                    String url,
+                                            String url,
                                     @Value("${database.username}")
-                                    String username,
+                                            String username,
                                     @Value("${database.password}")
-                                    String password) {
+                                            String password) {
         Properties props = new Properties();
         props.setProperty("driver", driver);
         props.setProperty("url", url);

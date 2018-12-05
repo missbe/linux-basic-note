@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-30 上午11:33
+ *
  * @author: lyg
  * description:
  **/
@@ -32,7 +33,6 @@ public class MyInterceptor implements Interceptor {
 
     /**
      * 取代原有事件方法
-     *
      */
     @Override
     public Object around(Invocation invocation) throws InvocationTargetException, IllegalAccessException {

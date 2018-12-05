@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-29 下午3:07
+ *
  * @author: lyg
  * description:
  **/
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
     @RequestMapping("/index")
-    public String index(){
+    public String index() {
         System.out.println("/index");
         return "index";
     }

@@ -9,6 +9,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-29 下午9:17
+ *
  * @author: lyg
  * description:
  **/
@@ -16,7 +17,8 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 public class DatabaseConditional implements Condition {
     /**
      * 数据库装配条件
-     * @param conditionContext 条件上下文
+     *
+     * @param conditionContext      条件上下文
      * @param annotatedTypeMetadata 注释类型的元数据
      * @return 是否装配Bean
      */

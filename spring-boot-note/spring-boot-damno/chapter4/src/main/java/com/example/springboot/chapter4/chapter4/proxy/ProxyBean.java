@@ -12,6 +12,7 @@ import java.lang.reflect.Proxy;
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-30 上午11:42
+ *
  * @author: lyg
  * description:
  **/
@@ -23,11 +24,12 @@ public class ProxyBean implements InvocationHandler {
 
     /**
      * 绑定代理对象
-     * @param target 被代理对象
+     *
+     * @param target      被代理对象
      * @param interceptor 拦截器
      * @return 代理对象
      */
-    public static Object getProxyBean(Object target, Interceptor interceptor){
+    public static Object getProxyBean(Object target, Interceptor interceptor) {
         ProxyBean proxyBean = new ProxyBean();
         ///保存被代理对象
         proxyBean.target = target;
@@ -35,14 +37,15 @@ public class ProxyBean implements InvocationHandler {
         proxyBean.interceptor = interceptor;
         ///返回生成的代理对象
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),
-                target.getClass().getInterfaces(),proxyBean);
+                target.getClass().getInterfaces(), proxyBean);
     }
 
     /**
      * 处理代理对象方法逻辑
-     * @param proxy 代理对象
+     *
+     * @param proxy  代理对象
      * @param method 当前方法
-     * @param args 运行参数
+     * @param args   运行参数
      * @return 方法调用结果
      * @throws Throwable 异常
      */
@@ -50,20 +53,20 @@ public class ProxyBean implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         ///异常标识
         boolean exceptionFlag = false;
-        Invocation invocation = new Invocation(target,method,args);
+        Invocation invocation = new Invocation(target, method, args);
         Object retObj = null;
         try {
-            if(this.interceptor.before()){
+            if (this.interceptor.before()) {
                 retObj = this.interceptor.around(invocation);
-            }else {
-                retObj = method.invoke(target,args);
+            } else {
+                retObj = method.invoke(target, args);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(e.getLocalizedMessage());
             exceptionFlag = true;
         }
         this.interceptor.after();
-        if(exceptionFlag){
+        if (exceptionFlag) {
 
         }
         return null;

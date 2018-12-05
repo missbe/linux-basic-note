@@ -16,6 +16,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-29 下午3:30
+ *
  * @author: lyg
  * description:
  **/
@@ -30,26 +31,26 @@ public class IocTest {
         User user = ctx.getBean(User.class);
         logger.info(user.toString());
         UserService userService = ctx.getBean(UserService.class);
-        if(userService != null){
+        if (userService != null) {
             userService.printUser(user);
         }
         System.out.println();
     }
 
     @Test
-    public void testProperties(){
+    public void testProperties() {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         System.out.println(ctx.getBean(Properties.class));
     }
 
     @Test
-    public void testAnnotation(){
+    public void testAnnotation() {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         ctx.close();
     }
 
     @Test
-    public void testScope(){
+    public void testScope() {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         ScopeBean scopeBean_one = ctx.getBean(ScopeBean.class);
         ScopeBean scopeBean_two = ctx.getBean(ScopeBean.class);
@@ -58,7 +59,7 @@ public class IocTest {
     }
 
     @Test
-    public void testSpringEL(){
+    public void testSpringEL() {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         SpringELBean bean = ctx.getBean(SpringELBean.class);
         System.out.println(bean.toString());

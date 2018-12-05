@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-30 上午11:30
+ *
  * @author: lyg
  * description:
  **/
@@ -27,10 +28,11 @@ public class Invocation {
         this.method = method;
         this.target = target;
     }
+
     /**
      * 反射方法->以反射的形式调用原有方法
      */
-    public Object proceed() throws InvocationTargetException,IllegalAccessException{
-        return method.invoke(target,params);
+    public Object proceed() throws InvocationTargetException, IllegalAccessException {
+        return method.invoke(target, params);
     }
 }

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-29 下午8:29
+ *
  * @author: lyg
  * description:
  **/
@@ -18,7 +19,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @ToString
-@PropertySource(value = {"classpath:jdbc.properties"},ignoreResourceNotFound = true)
+@PropertySource(value = {"classpath:jdbc.properties"}, ignoreResourceNotFound = true)
 public class Properties {
     @Value("${database.driver}")
     private String driver = "com.mysql.jdbc.Driver";

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
  * mail: love1208tt@foxmail.com
  * Copyright (c) 2018. unnet.missbe
  * Date:  18-11-29 下午7:23
+ *
  * @author: lyg
  * description:
  **/
@@ -15,14 +16,14 @@ import org.springframework.stereotype.Component;
 public class BeanPostProcessorExample implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("BeanPostProcessor调用postProcessBeforeInitialization方法，参数"+
+        System.out.println("BeanPostProcessor调用postProcessBeforeInitialization方法，参数" +
                 bean.getClass().getSimpleName() + "-->" + beanName);
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("BeanPostProcessor调用postProcessAfterInitialization方法，参数"+
+        System.out.println("BeanPostProcessor调用postProcessAfterInitialization方法，参数" +
                 bean.getClass().getSimpleName() + "-->" + beanName);
         return bean;
     }
