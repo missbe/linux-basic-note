@@ -2,11 +2,11 @@
 
 -->实现依赖结构图
 
-![spring aop](E:\cqupt\typora\study-basic-note\spring-boot-note\img\aop1.png)
+![spring aop](..\img\aop1.png)
 
 -->约定流程图
 
-![aop](E:\cqupt\typora\study-basic-note\spring-boot-note\img\aop2.png)
+![aop](..\img\aop2.png)
 
 -->HelloService
 
